@@ -4,17 +4,23 @@
 		<div class="conteudo">
 			<form class="painel" v-if="!enviado">
 				<div class="cabecalho">Formulário</div>
+				<Rotulo nome="ID" >
+					<input type="text" v-model="fornecedor.id">
+				</Rotulo>
 				<Rotulo nome="Nome" >
-					<input type="text" v-model="animal.nome">
+					<input type="text" v-model="fornecedor.nome">
 				</Rotulo>
-				<Rotulo nome="Data Nascimento">
-					<input type="date" v-model="animal.datanascimento">
+				<Rotulo nome="Data" >
+					<input type="date" v-model="fornecedor.data">
 				</Rotulo>
-				<Rotulo nome="Nome da Mãe">
-					<input type="text" v-model="animal.nomemae">
+				<Rotulo nome="Produto">
+					<input type="text" v-model="fornecedor.produto">
 				</Rotulo>
-                <Rotulo nome="IGT">
-					<input type="text" v-model="animal.igt">
+				<Rotulo nome="Quantidade">
+					<input type="text" v-model="fornecedor.quantidade">
+				</Rotulo>
+                <Rotulo nome="Valor">
+					<input type="text" v-model="fornecedor.valor">
 				</Rotulo>
 				<hr>
 				<button @click.prevent="enviar">Enviar</button>
@@ -46,18 +52,19 @@ export default {
 		return{
 			mensagem: '',
 			caracteristicas: [],
-			produto: 'web',
 			prioridade: 1,
 			prioridades:[
 				{codigo: 1 , nome: 'Baixa'},
 				{codigo: 2, nome: 'Moderada'},
 				{codigo: 3, nome: 'Alta'}
 			],
-			animal:{
+			fornecedor:{
+				id: null,
 				nome: '',
-				datanascimento: null,
-				nomemae: null,
-                gti: null
+				data: null,
+				produto: null,
+				quantidade: null,
+                valor: null
 			},
 			enviado: false
 		}

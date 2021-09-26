@@ -2,7 +2,7 @@
 	<div id="app">
 		<h1>Cadastrar Animal</h1>
 		<div class="conteudo">
-			<form class="painel" v-if="!enviado">
+			<form class="painel" >
 				<div class="cabecalho">Formulário</div>
 				<Rotulo nome="Nome" >
 					<input type="text" v-model="animal.nome">
@@ -13,13 +13,13 @@
 				<Rotulo nome="Nome da Mãe">
 					<input type="text" v-model="animal.nomemae">
 				</Rotulo>
-                <Rotulo nome="IGT">
-					<input type="text" v-model="animal.igt">
+                <Rotulo nome="GTA">
+					<input type="text" v-model="animal.gta">
 				</Rotulo>
 				<hr>
 				<button @click.prevent="enviar">Enviar</button>
 			</form>
-			<div class="painel" v-else>
+			<div class="painel" >
 				<div class="cabecalho">Resultado</div>
 				<Rotulo nome="Nome">
 					<span>{{animal.nome}}</span>

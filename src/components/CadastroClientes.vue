@@ -4,17 +4,24 @@
 		<div class="conteudo">
 			<form class="painel" v-if="!enviado">
 				<div class="cabecalho">Formulário</div>
+				<Rotulo nome="ID" >
+					<input type="number" v-model="animal.id">
+				</Rotulo>
 				<Rotulo nome="Nome" >
 					<input type="text" v-model="animal.nome">
 				</Rotulo>
-				<Rotulo nome="Data Nascimento">
-					<input type="date" v-model="animal.datanascimento">
+				<Rotulo nome="Data Inicio">
+					<input type="date" v-model="animal.datainicio">
 				</Rotulo>
-				<Rotulo nome="Nome da Mãe">
-					<input type="text" v-model="animal.nomemae">
+				<Rotulo nome="Data Fim">
+					<input type="date" v-model="animal.datafim">
 				</Rotulo>
-                <Rotulo nome="IGT">
-					<input type="text" v-model="animal.igt">
+				<Rotulo nome="Forma de Pagamento">
+					<select name="" id="" v-model="prioridade">
+						<option v-for="prioridade in prioridades"
+						:value="prioridade.codigo"
+						:key="prioridade.codigo">{{prioridade.codigo}}-{{prioridade.nome}}</option>
+					</select>
 				</Rotulo>
 				<hr>
 				<button @click.prevent="enviar">Enviar</button>
@@ -49,9 +56,9 @@ export default {
 			produto: 'web',
 			prioridade: 1,
 			prioridades:[
-				{codigo: 1 , nome: 'Baixa'},
-				{codigo: 2, nome: 'Moderada'},
-				{codigo: 3, nome: 'Alta'}
+				{codigo: 1 , nome: 'Avista'},
+				{codigo: 2, nome: 'Semanal'},
+				{codigo: 3, nome: 'Mensal'}
 			],
 			animal:{
 				nome: '',
