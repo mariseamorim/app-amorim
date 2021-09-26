@@ -1,9 +1,9 @@
 <template>
-    <v-carousel height="840">
+    <v-carousel >
         <v-carousel-item
             v-for="(item,i) in fotos"
             :key="i"
-            :src="item.src" max-height="910"></v-carousel-item>
+            :src="item.src" ></v-carousel-item>
     </v-carousel>
 </template>
 
@@ -13,7 +13,6 @@ export default {
 	data() {
 		return {
 			fotos: [
-				{src: require('@/assets/logo.png')},
 				{src: require('@/assets/img.jpg')},
 				{src: require('@/assets/20201017_181411.jpg')},
 				{src: require('@/assets/20201017_181403.jpg')},
@@ -42,5 +41,14 @@ export default {
 </script>
 
 <style>
+.v-carousel .v-window-item {
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+.v-carousel-item {
+  height: auto;
+}
 
 </style>

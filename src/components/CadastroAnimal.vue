@@ -1,5 +1,5 @@
 <template>
-	<div id="app">
+	<div id="animais">
 		<h1>Cadastrar Animal</h1>
 		<div class="conteudo">
 			<form class="painel" >
@@ -76,7 +76,7 @@ body {
 	background-color: #ECECEC;
 }
 
-#app {
+#animais {
 	font-family: 'Avenir', Helvetica, Arial, sans-serif;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
@@ -108,7 +108,7 @@ body {
 	font-size: 1.4rem;
 }
 
-#app form button {
+#animais form button {
 	float: right;
 	margin: 10px 0px;
 	padding: 10px 20px;
@@ -118,7 +118,7 @@ body {
 	background-color: #2196F3;
 }
 
-#app h1 {
+#animais h1 {
 	font-weight: 200;
 	margin: 20px;
 	padding: 0;

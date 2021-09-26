@@ -21,3 +21,8 @@ export default {
 	components: { Carousel, Footer }
 }
 </script>
+<style scoped>
+.v-application--wrap {
+    min-height: 0vh !important;
+  }
+</style>

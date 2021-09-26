@@ -1,5 +1,5 @@
 <template>
-	<div id="app">
+	<div id="registro">
 		<h1>Ficha Animal</h1>
 		<div class="conteudo">
 			<form class="painel" v-if="!enviado">
@@ -122,7 +122,7 @@ body {
 	background-color: #ECECEC;
 }
 
-#app {
+#registro {
 	font-family: 'Avenir', Helvetica, Arial, sans-serif;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
@@ -131,6 +131,7 @@ body {
 
 	display: flex;
 	flex-direction: column;
+	overflow: auto !important;
 }
 
 .conteudo {
@@ -154,7 +155,7 @@ body {
 	font-size: 1.4rem;
 }
 
-#app form button {
+#registro form button {
 	float: right;
 	margin: 10px 0px;
 	padding: 10px 20px;
@@ -164,7 +165,7 @@ body {
 	background-color: #2196F3;
 }
 
-#app h1 {
+#registro h1 {
 	font-weight: 200;
 	margin: 20px;
 	padding: 0;

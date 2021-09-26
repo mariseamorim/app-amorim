@@ -1,5 +1,5 @@
 <template>
-	<div id="app">
+	<div id="fornec">
 		<h1>Cadastrar Fornecedor</h1>
 		<div class="conteudo">
 			<form class="painel" v-if="!enviado">
@@ -46,7 +46,7 @@ import Rotulo from './Rotulo.vue'
 
 
 export default {
-	name: 'app',
+	name: 'fornec',
 	components: { Rotulo },
 	data(){
 		return{
@@ -83,7 +83,7 @@ body {
 	background-color: #ECECEC;
 }
 
-#app {
+#fornec {
 	font-family: 'Avenir', Helvetica, Arial, sans-serif;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
@@ -115,7 +115,7 @@ body {
 	font-size: 1.4rem;
 }
 
-#app form button {
+#fornec form button {
 	float: right;
 	margin: 10px 0px;
 	padding: 10px 20px;
@@ -125,7 +125,7 @@ body {
 	background-color: #2196F3;
 }
 
-#app h1 {
+#fornec h1 {
 	font-weight: 200;
 	margin: 20px;
 	padding: 0;

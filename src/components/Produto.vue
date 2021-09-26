@@ -1,5 +1,5 @@
 <template>
-	<div id="app">
+	<div id="prod">
 		<h1>Cadastrar Produtos</h1>
 		<div class="conteudo">
 			<form class="painel" v-if="!enviado">
@@ -43,7 +43,7 @@ import Rotulo from './Rotulo.vue'
 
 
 export default {
-	name: 'app',
+	name: 'prod',
 	components: { Rotulo },
 	data(){
 		return{
@@ -80,7 +80,7 @@ body {
 	background-color: #ECECEC;
 }
 
-#app {
+#prod {
 	font-family: 'Avenir', Helvetica, Arial, sans-serif;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
@@ -112,7 +112,7 @@ body {
 	font-size: 1.4rem;
 }
 
-#app form button {
+#prod form button {
 	float: right;
 	margin: 10px 0px;
 	padding: 10px 20px;
@@ -122,7 +122,7 @@ body {
 	background-color: #2196F3;
 }
 
-#app h1 {
+#prod h1 {
 	font-weight: 200;
 	margin: 20px;
 	padding: 0;

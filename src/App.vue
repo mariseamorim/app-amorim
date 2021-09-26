@@ -1,5 +1,5 @@
 <template>
-  <div id="app">
+  <div id="app" class="app">
 
     <Header  >
       <template v-slot:logo>
@@ -69,14 +69,20 @@ export default {
   margin: 0;
   padding: 0;
 }
+body, html {height:100%;}
 body{
   font-family: "Montserrat", sans-serif;
   line-height: 1.6;
   color: #333;
+  height: 100% !important;
 }
+.v-application--wrap {
+    min-height: 0vh !important;
+  }
 ul{
   list-style-type: none;
 }
+
 a{
   color: #333;
 }

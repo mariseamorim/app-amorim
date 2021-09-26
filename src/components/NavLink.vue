@@ -35,6 +35,7 @@ export default {
   cursor: pointer;
   font-size: 16px;
   transition: all 0.5s ease-in;
+  padding: 0px;
 }
 
 .nav-link:hover{
