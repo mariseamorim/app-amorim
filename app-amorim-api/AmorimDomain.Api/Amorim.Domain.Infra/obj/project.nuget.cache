@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "Q2ADoqX9pdP7akhesCKuxCUqMd9ci3x30csF5IERzsksqfrS35GebmbRPEXJcLlsKrTEIDHpx5gltb2wKBor2Q==",
+  "success": true,
+  "projectFilePath": "C:\\amorim\\app-amorim-api\\AmorimDomain.Api\\Amorim.Domain.Infra\\Amorim.Domain.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\marise.amorim\\.nuget\\packages\\flunt\\2.0.5\\flunt.2.0.5.nupkg.sha512"
+  ],
+  "logs": []
+}

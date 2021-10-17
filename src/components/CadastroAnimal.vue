@@ -1,36 +1,27 @@
 <template>
 	<div id="animais">
 		<h1>Cadastrar Animal</h1>
+		<v-alert dismissible type="success"  color="green" v-for="mensagem in mensagens"
+					:key="mensagem.texto">{{ mensagem.texto }}</v-alert>
 		<div class="conteudo">
 			<form class="painel" >
 				<div class="cabecalho">Formulário</div>
+					
 				<Rotulo nome="Nome" >
 					<input type="text" v-model="animal.nome">
 				</Rotulo>
 				<Rotulo nome="Data Nascimento">
-					<input type="date" v-model="animal.datanascimento">
+					<input type="date" v-model="animal.dataNascimento">
 				</Rotulo>
 				<Rotulo nome="Nome da Mãe">
-					<input type="text" v-model="animal.nomemae">
+					<input type="text" v-model="animal.nomeMae">
 				</Rotulo>
                 <Rotulo nome="GTA">
 					<input type="text" v-model="animal.gta">
 				</Rotulo>
 				<hr>
-				<button @click.prevent="enviar">Enviar</button>
+				<button class="enviar" @click.prevent="enviar">Enviar</button>
 			</form>
-			<div class="painel" >
-				<div class="cabecalho">Resultado</div>
-				<Rotulo nome="Nome">
-					<span>{{animal.nome}}</span>
-				</Rotulo>
-				<Rotulo nome="Data de Nascimento">
-					<span>{{animal.datanascimento}}</span>
-				</Rotulo>
-				<Rotulo nome="Nome da Mãe">
-					<span>{{animal.nomemae}}</span>
-				</Rotulo>
-			</div>
 		</div>
 	</div>
 </template>
@@ -44,27 +35,30 @@ export default {
 	components: { Rotulo },
 	data(){
 		return{
-			mensagem: '',
-			caracteristicas: [],
-			produto: 'web',
-			prioridade: 1,
-			prioridades:[
-				{codigo: 1 , nome: 'Baixa'},
-				{codigo: 2, nome: 'Moderada'},
-				{codigo: 3, nome: 'Alta'}
-			],
+			mensagens: [],
 			animal:{
 				nome: '',
-				datanascimento: null,
-				nomemae: null,
+				dataNascimento: null,
+				nomeMae: null,
                 gti: null
 			},
 			enviado: false
 		}
 	},
 	methods:{
+		limpar() {
+			this.animal = {},
+			this.mensagens = []
+		},
 		enviar(){
 			this.enviado = true;
+			this.$http.post(`/v1/animal/cadastrar`, this.animal)
+				.then((resp) => {
+					this.limpar()
+					this.$swal({icon: 'success',title: 'Legal!',text: `Cadastro do animal nome:${resp.data.data.nome} id:${resp.data.data.id} realizado com sucesso!`,});
+					this.enviado = true;
+					
+				})
 		}
 	}
 }
@@ -108,14 +102,14 @@ body {
 	font-size: 1.4rem;
 }
 
-#animais form button {
+.enviar {
 	float: right;
 	margin: 10px 0px;
 	padding: 10px 20px;
 	font-size: 1.4rem;
 	border-radius: 5px;
 	color: #FFF;
-	background-color: #2196F3;
+	background-color: #080808;
 }
 
 #animais h1 {

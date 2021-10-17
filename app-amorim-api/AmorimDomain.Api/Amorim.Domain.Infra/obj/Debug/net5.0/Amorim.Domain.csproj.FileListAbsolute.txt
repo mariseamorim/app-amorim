@@ -1,0 +1,12 @@
+C:\amorim\app-amorim-api\AmorimDomain.Api\Amorim.Domain.Infra\bin\Debug\net5.0\Amorim.Domain.deps.json
+C:\amorim\app-amorim-api\AmorimDomain.Api\Amorim.Domain.Infra\bin\Debug\net5.0\Amorim.Domain.dll
+C:\amorim\app-amorim-api\AmorimDomain.Api\Amorim.Domain.Infra\bin\Debug\net5.0\ref\Amorim.Domain.dll
+C:\amorim\app-amorim-api\AmorimDomain.Api\Amorim.Domain.Infra\bin\Debug\net5.0\Amorim.Domain.pdb
+C:\amorim\app-amorim-api\AmorimDomain.Api\Amorim.Domain.Infra\obj\Debug\net5.0\Amorim.Domain.csproj.AssemblyReference.cache
+C:\amorim\app-amorim-api\AmorimDomain.Api\Amorim.Domain.Infra\obj\Debug\net5.0\Amorim.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\amorim\app-amorim-api\AmorimDomain.Api\Amorim.Domain.Infra\obj\Debug\net5.0\Amorim.Domain.AssemblyInfoInputs.cache
+C:\amorim\app-amorim-api\AmorimDomain.Api\Amorim.Domain.Infra\obj\Debug\net5.0\Amorim.Domain.AssemblyInfo.cs
+C:\amorim\app-amorim-api\AmorimDomain.Api\Amorim.Domain.Infra\obj\Debug\net5.0\Amorim.Domain.csproj.CoreCompileInputs.cache
+C:\amorim\app-amorim-api\AmorimDomain.Api\Amorim.Domain.Infra\obj\Debug\net5.0\Amorim.Domain.dll
+C:\amorim\app-amorim-api\AmorimDomain.Api\Amorim.Domain.Infra\obj\Debug\net5.0\ref\Amorim.Domain.dll
+C:\amorim\app-amorim-api\AmorimDomain.Api\Amorim.Domain.Infra\obj\Debug\net5.0\Amorim.Domain.pdb
